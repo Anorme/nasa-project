@@ -11,8 +11,8 @@ COPY server/package*.json server/
 
 # Install dependencies
 RUN npm install
-RUN npm run install-client --prefix client
-RUN npm run install-server --prefix server --omit=dev
+RUN npm run install-client
+RUN npm run install-server --omit=dev
 
 # Copy application source code after installing dependencies
 COPY client/ client/
